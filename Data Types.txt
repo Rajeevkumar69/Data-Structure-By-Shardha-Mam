@@ -1,0 +1,7 @@
+Data Types
+
+* int 4 Bytes
+* char 1 Bytes
+* float 4 Bytes
+* bool 1 Bytes
+* double 8 Bytes
