@@ -1,10 +1,23 @@
 #include <iostream>
 using namespace std;
 
+int printReverse(int number)
+{
+     int reverse = 0;
+
+     while (number > 0)
+     {
+          int digit = number % 10;
+          reverse = reverse * 10 + digit;
+          number /= 10;
+     }
+
+     return reverse;
+}
+
 int main()
 {
-     int a = 4, b = 8;
-     cout << (a ^ b);
+     cout << printReverse(1235);
 
      return 0;
 }
