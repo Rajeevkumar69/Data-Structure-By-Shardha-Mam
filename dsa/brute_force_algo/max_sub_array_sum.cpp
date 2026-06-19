@@ -1,13 +1,11 @@
-// Maximum sub array sum using Brute Force Algorithm
-
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
 {
-
-     int size = 5;
-     int nums[5] = {1, 2, 3, 4, 5};
+     vector<int> nums = {2, 3, 4, 5, 6};
+     int size = nums.size();
 
      int maxSum = INT_MIN;
 
@@ -16,11 +14,10 @@ int main()
           int currSum = 0;
           for (int end = st; end < size; end++)
           {
-               currSum += nums[end];
+               currSum = currSum + nums[end];
                maxSum = max(currSum, maxSum);
           }
      }
-
-     cout << "Max Sum is = " << maxSum;
+     cout << maxSum;
      return 0;
 }
