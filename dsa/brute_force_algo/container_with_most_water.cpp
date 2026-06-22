@@ -1,22 +1,20 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
 
-int calculateWaterContainer(vector<int> height)
+int containerWithMostWater(vector<int> height)
 {
      int maxWater = 0;
      int size = height.size();
-     int w = 0, h = 0, area = 0;
 
      for (int i = 0; i < size; i++)
      {
           for (int j = i + 1; j < size; j++)
           {
-               w = j - i;
-               h = min(height[i], height[j]);
-               area = h * w;
+               int wh = j - i;
+               int ht = min(height[i], height[j]);
+               int area = wh * ht;
                maxWater = max(maxWater, area);
           }
      }
@@ -25,10 +23,9 @@ int calculateWaterContainer(vector<int> height)
 
 int main()
 {
-     vector<int> containers = {7, 1, 5, 4, 3};
+     vector<int> containers = {7, 5, 4, 8, 9, 12, 6, 5445};
 
-     int result = calculateWaterContainer(containers);
+     int result = containerWithMostWater(containers);
      cout << result;
-
      return 0;
 }
