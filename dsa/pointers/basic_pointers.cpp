@@ -12,5 +12,9 @@ int main()
      cout << **q << endl;
      cout << *q << endl;
 
+     cout << p << endl;
+     p++;
+     cout << p << endl;
+
      return 0;
 }
