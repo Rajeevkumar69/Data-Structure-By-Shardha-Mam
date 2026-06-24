@@ -14,6 +14,7 @@ int main()
 
      cout << p << endl;
      p++;
+     // p--;
      cout << p << endl;
 
      return 0;
