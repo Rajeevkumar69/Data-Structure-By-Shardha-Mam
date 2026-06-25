@@ -2,31 +2,29 @@
 #include <vector>
 using namespace std;
 
-// Find the target value index in the given vector
+// Find the index of the target value in vector using binary search
 int binarySearch()
 {
-     vector<int> arr = {-1, 0, 3, 4, 5, 9, 12};
-
-     int size = arr.size();
-     int target = -1;
+     vector<int> arr = {2, 5, 4, 6, 8, 10, 12, 16};
+     int target = 8;
      int start = 0;
-     int end = size - 1;
+     int end = arr.size() - 1;
 
      while (start <= end)
      {
-          int mid = start + (end / 2);
+          int mid = start + (end - start) / 2;
 
-          if (target > arr[mid])
+          if (arr[mid] == target)
+          {
+               return mid;
+          }
+          else if (arr[mid] < target)
           {
                start = mid + 1;
           }
-          else if (target < arr[mid])
-          {
-               end = mid - 1;
-          }
           else
           {
-               return mid;
+               end = mid - 1;
           }
      }
      return -1;
