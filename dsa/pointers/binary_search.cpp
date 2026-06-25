@@ -34,3 +34,6 @@ int main()
 {
      cout << binarySearch();
 }
+
+// TC => O(logn)
+// SC => O(1)
