@@ -7,8 +7,8 @@ using namespace std;
 
 int findPeakIndex(vector<int> nums)
 {
-     int size = nums.size() - 1;
-     for (int i = 1; i < size; i++)
+     int size = nums.size();
+     for (int i = 1; i < size - 1; i++)
      {
           if (nums[i] > nums[i - 1] && nums[i] > nums[i + 1])
           {
