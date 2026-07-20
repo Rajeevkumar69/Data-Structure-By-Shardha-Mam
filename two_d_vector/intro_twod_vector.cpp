@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+     vector<vector<int>> matrix = {{1, 5, 2}, {5, 5, 8, 6, 9}};
+
+     for (int i = 0; i < matrix.size(); i++)
+     {
+          for (int j = 0; j < matrix[i].size(); j++)
+          {
+               cout << matrix[i][j] << " ";
+          }
+          cout << "\n";
+     }
+     return 0;
+}
