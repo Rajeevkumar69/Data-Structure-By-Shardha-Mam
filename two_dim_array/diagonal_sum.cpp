@@ -6,16 +6,11 @@ int calculateDiagonalSum(int mat[][4], int row, int col)
      int sum = 0;
      for (int i = 0; i < row; i++)
      {
-          for (int j = 0; j < col; j++)
+          sum += mat[i][i];
+
+          if (i != col - i - 1)
           {
-               if (i == j)
-               {
-                    sum += mat[i][j];
-               }
-               else if (j == col - i - 1)
-               {
-                    sum += mat[i][j];
-               }
+               sum += mat[i][col - i - 1];
           }
      }
      return sum;
