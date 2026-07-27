@@ -1,30 +1,44 @@
 #include <iostream>
 #include <vector>
+#include <set>
+#include <algorithm>
 using namespace std;
 
-//  Brute Force Approach
 int main()
 {
-     vector<int> nums = {-1, 0, 1, 2, -4};
+     vector<int> nums = {-1, 0, 1, 2, -1, -4};
      int target = 0, n = nums.size();
 
-     for (int i = 0; i < n; n++)
+     set<vector<int>> s;
+     vector<vector<int>> ans;
+
+     for (int i = 0; i < n; i++)
      {
-          int a = nums[i];
           for (int j = i + 1; j < n; j++)
           {
-               int b = nums[j];
                for (int k = j + 1; k < n; k++)
                {
-                    int c = nums[k];
-                    if (a + b + c == target)
+                    if (nums[i] + nums[j] + nums[k] == target)
                     {
-                         cout << i << "," << j << "," << k;
-                         return 0;
+                         vector<int> trip = {nums[i], nums[j], nums[k]};
+                         sort(trip.begin(), trip.end());
+
+                         if (s.find(trip) == s.end())
+                         {
+                              s.insert(trip);
+                              ans.push_back(trip);
+                         }
                     }
                }
           }
      }
-     cout << -1 << "," << -1 << "," << -1;
+
+     for (auto &trip : ans)
+     {
+          for (int x : trip)
+               cout << x << " ";
+          cout << endl;
+     }
+
      return 0;
 }
