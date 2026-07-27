@@ -36,8 +36,10 @@ int main()
      for (auto &trip : ans)
      {
           for (int x : trip)
+          {
                cout << x << " ";
-          cout << endl;
+          }
+          cout << "\n";
      }
 
      return 0;
