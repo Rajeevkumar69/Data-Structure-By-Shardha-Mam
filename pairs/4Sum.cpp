@@ -32,7 +32,7 @@ int main()
                     {
                          if (nums[i] + nums[j] + nums[k] + nums[l] == 0)
                          {
-                              vector<int> trip = {nums[i], nums[j], nums[k]};
+                              vector<int> trip = {nums[i], nums[j], nums[k], nums[l]};
                               sort(trip.begin(), trip.end());
 
                               if (s.find(trip) == s.end())
