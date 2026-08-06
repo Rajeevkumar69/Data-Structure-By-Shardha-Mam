@@ -42,3 +42,10 @@ int main()
      }
      return 0;
 }
+
+/*
+Avg./Pratical TC: => O(n log n)
+Worst TC: => O(n*n)
+
+SC: => O(1)
+*/
