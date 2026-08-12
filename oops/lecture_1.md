@@ -1,44 +1,43 @@
-# OOPs <Object oriented programming>
+# OOPs <Object Oriented Programming>
 
-- object are entities in the real world.
-- class is like a blueprint of these entities.
+* **Objects are entities in the real world.**
+* **Class is a blueprint of these entities.**
 
+```cpp
 class Teacher {
-     // properties | attributes
-    string name; 
-    string dept;
-    string subject;
-    float salary;
+    Private:
+        string name;
+        string dept;
+        string subject;
+        float salary;
 
-    // method | Member functions
-    void changeDept(newdept) {
-        dept = newdept;
-    }
+    Public:
+        void changeDept(newdept) {
+            dept = newdept;
+        }
 };
+```
 
 ## Access Modifiers
 
-private:- data & methods accessible inside class.
+* **private:** Data & methods accessible inside the class.
+* **public:** Data & methods accessible to everyone.
+* **protected:** Data & methods accessible inside the class & derived class.
 
-public:- data / methods accessible to everyone.
-
-protected:- data & methods accessible inside class & to its derived class.
-
-
-# 4 Main pillars of OOPs:
+## 4 Main Pillars of OOPs
 
 1. Encapsulation
 2. Abstraction
 3. Inheritance
-4. polymorphism
-
+4. Polymorphism
 
 ## 1. Encapsulation
 
-Encapsulation is wrapping up of data and member function in a single unit class/ class.
+**Encapsulation** is wrapping data and member functions into a single unit/class.
 
--> it basically use to hide the data/attribute in a class.
+→ It is basically used to hide data/attributes inside a class.
 
+```cpp
 class Account {
     Private:
         double balance;
@@ -46,19 +45,18 @@ class Account {
     Public:
         string username;
 };
+```
 
+## Constructor
 
-# Constructor
+**Constructor:** Special method invoked automatically when an object is created.
 
-* constructor
+* Same name as the class.
+* No return type.
+* Called once during object creation.
+* Memory allocation happens when constructor is called.
 
-special method invoked automatically at time of object creation. used for initialisation.
-
-- same name as class.
-- constructor doesn't have a return type.
-- Only called once, at object creation.
-- Memory allocation happens when constructor is called.
-
+```cpp
 class Teacher {
     Private:
         double salary;
@@ -66,19 +64,18 @@ class Teacher {
     Public:
         string name;
 
-        Teacher() { // constructor
+        Teacher() {
             name = "ABC";
         }
-}
+};
 
 int main() {
     Teacher t1;
-    t1. cout<<t1.name;
+    cout << t1.name;
 }
+```
 
+## Shallow & Deep Copy
 
-# Shallow & Deep copy
-
-- A shallow copy of an object copies all the member values from one object to another.
-
--> A deep copy, on the other hand, not only copies the member value but also copies any dynamically allocated memory that the member points to.
+* **Shallow Copy:** Copies all member values from one object to another.
+* **Deep Copy:** Copies member values and dynamically allocated memory pointed to by the member.
