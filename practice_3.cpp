@@ -148,3 +148,8 @@ int subArrayProduct(vector<int> &nums, int n)
      }
      return maxProd;
 }
+
+int main()
+{
+     return 0;
+}
