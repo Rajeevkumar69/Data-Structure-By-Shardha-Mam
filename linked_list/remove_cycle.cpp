@@ -132,19 +132,19 @@ ListNode *removeCycle(ListNode *head)
      return head;
 
      //  To break the LL Cycle
-     ListNode *prev = NULL;
+     // ListNode *prev = NULL;
 
-     while (fast != slow)
-     {
-          slow = slow->next;
+     // while (fast != slow)
+     // {
+     //      slow = slow->next;
 
-          prev = fast;
-          fast = fast->next;
-     }
+     //      prev = fast;
+     //      fast = fast->next;
+     // }
 
-     prev->next = NULL;
+     // prev->next = NULL;
 
-     return head;
+     // return head;
 }
 
 int main()
