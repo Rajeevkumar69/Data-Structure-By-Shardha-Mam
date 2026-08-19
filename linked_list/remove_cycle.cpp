@@ -11,7 +11,6 @@ So to solve this kind of problem, we can use our slow-fast approach.
 
 Basically, we can initialize two `ListNode*`:
 
-
 ListNode* slow = head;
 ListNode* fast = head;
 
@@ -132,19 +131,19 @@ ListNode *removeCycle(ListNode *head)
      return head;
 
      //  To break the LL Cycle
-     // ListNode *prev = NULL;
+     ListNode *prev = NULL;
 
-     // while (fast != slow)
-     // {
-     //      slow = slow->next;
+     while (fast != slow)
+     {
+          slow = slow->next;
 
-     //      prev = fast;
-     //      fast = fast->next;
-     // }
+          prev = fast;
+          fast = fast->next;
+     }
 
-     // prev->next = NULL;
+     prev->next = NULL;
 
-     // return head;
+     return head;
 }
 
 int main()
