@@ -17,6 +17,21 @@ vector<int> removeElement(vector<int> &arr, int target)
      return arr;
 }
 
+vector<int> updateArray(vector<int> &arr, int target, int newElement)
+{
+     int n = arr.size();
+
+     for (int i = 0; i < n; i++)
+     {
+          if (arr[i] == target)
+          {
+               arr[i] = newElement;
+               return arr;
+          }
+     }
+     return arr;
+}
+
 int main()
 {
      vector<int> arr = {2, 5, 4, 8, 7, 9};
@@ -28,5 +43,14 @@ int main()
      {
           cout << val << " ";
      }
+
+     cout << "\n";
+     vector<int> result2 = updateArray(arr, target, 12);
+
+     for (int i : result2)
+     {
+          cout << i << " ";
+     }
+
      return 0;
 }
