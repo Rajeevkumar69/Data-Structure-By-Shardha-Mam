@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-     // Two Sum
+     // Return same element array / vector
      vector<int> arr = {2, 2, 4, 6, 6, 5, 5};
      vector<int> ans;
      int n = arr.size();
