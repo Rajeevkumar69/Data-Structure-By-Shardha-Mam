@@ -1,8 +1,8 @@
-## Stack
+# Stack
 
-# A stack is a linear data structure that follows the LIFO (Last In, First Out) principle, meaning the last element added to the stack is the first one to be removed.
+## A stack is a linear data structure that follows the LIFO (Last In, First Out) principle, meaning the last element added to the stack is the first one to be removed.
 
-# Key Stack Operations
+### Key Stack Operations
 
 * push() — Adds an element to the top of the stack
 
