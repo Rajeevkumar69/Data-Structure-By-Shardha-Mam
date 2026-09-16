@@ -31,11 +31,11 @@ int main() {
     cout << numbers.top();
 
     cout << numbers.top();
-    
-     while (!numbers.empty()) {
-          cout << numbers.top() << " ";
-          numbers.pop(); 
-     }
+        
+    while (!numbers.empty()) {
+        cout << numbers.top() << " ";
+        numbers.pop(); 
+    }
 
     return 0;
 }
