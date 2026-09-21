@@ -119,14 +119,13 @@ int main()
 
      Node *root = buildTree(preOrder);
 
-     // cout << root->data << "\n";
+     cout << root->data << "\n";
 
-     // cout << root->right->left->data << "\n";
+     cout << root->right->left->data << "\n";
 
-     // preOrderTraversal(root);
-     // inOrderTraversal(root);
-     // postOrderTraversal(root);
-
+     preOrderTraversal(root);
+     inOrderTraversal(root);
+     postOrderTraversal(root);
      levelOrderTraversal(root);
 
      return 0;
