@@ -23,7 +23,7 @@ public:
 
      void addEdges(int v, int u)
      {
-          l[u].push_back(v);
+          l[v].push_back(u);
      }
 
      bool isCycleDirDFS(int curr, vector<bool> &vis, vector<bool> &recPath)
