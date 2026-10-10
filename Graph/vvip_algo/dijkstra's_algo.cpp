@@ -75,3 +75,14 @@ int main()
 
      return 0;
 }
+
+/*
+TC: (O((V+E)\log V)), commonly written as (O(E\log V)) for a connected graph.
+SC: (O(V+E)), including the adjacency list and auxiliary data structures.
+
+Where:
+(V) = number of vertices
+(E) = number of edges
+
+Interview note: For an adjacency list with a binary heap, state TC: (O((V+E)\log V)), SC: (O(V+E)).
+*/
