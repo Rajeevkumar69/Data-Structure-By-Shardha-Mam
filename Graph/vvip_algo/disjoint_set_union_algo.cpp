@@ -49,7 +49,7 @@ public:
           {
                return x;
           }
-          return find(par[x]);
+          return par[x] = find(par[x]); // Path Compression
      }
 
      void getInfo()
