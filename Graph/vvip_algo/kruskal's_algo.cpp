@@ -118,6 +118,6 @@ int main()
 }
 
 /*
-TC: (O(Elog E))
-SC: (O(V+E))
+TC: O(Elog E)
+SC: O(V+E)
 */
