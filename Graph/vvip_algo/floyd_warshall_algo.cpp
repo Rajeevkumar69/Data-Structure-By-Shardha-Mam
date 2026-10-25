@@ -78,6 +78,7 @@ public:
                if (dist[i][i] < 0)
                {
                     cout << "Negitive Weighted Cycle Exists: \n";
+                    break;
                }
           }
      }
