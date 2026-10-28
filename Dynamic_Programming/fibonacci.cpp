@@ -32,6 +32,22 @@ int fibDP(int n, vector<int> &f)
      return f[n] = fibDP(n - 1, f) + fibDP(n - 2, f);
 }
 
+// Fibonacci using DP (Tabulation)
+
+int fibTabDP(int n)
+{
+     vector<int> dp(n + 1);
+
+     dp[0] = 0;
+     dp[1] = 1;
+
+     for (int i = 2; i <= n; i++)
+     {
+          dp[i] = dp[i - 1] + dp[i - 2];
+     }
+     return dp[n];
+}
+
 int main()
 {
      int n = 6;
